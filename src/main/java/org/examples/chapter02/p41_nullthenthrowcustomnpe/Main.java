@@ -12,13 +12,9 @@ public class Main {
             throw new NullPointerException("상품이 존재하지 않습니다.");
         }
 
-        if (Objects.isNull(input.getName())) {
-            throw new NullPointerException("이름이 존재하지 않습니다.");
-        }
-
-        if (Objects.isNull(input.getPrice())) {
-            throw new NullPointerException("가격이 존재하지 않습니다.");
-        }
+        // null이면 NPE를 던지고 아니면 검사한 참조를 반환한다.
+        Objects.requireNonNull(input.getPrice(), "가격이 존재하지 않습니다.");
+        Objects.requireNonNull(input.getName(), "이름이 존재하지 않습니다.");
     }
 
 

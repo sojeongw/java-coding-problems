@@ -1,5 +1,7 @@
 package org.examples.chapter02.p44_checkindexbetweenzerolength;
 
+import java.util.Objects;
+
 public class Main {
     public static void main(String[] args) {
         int length = 5;
@@ -9,8 +11,6 @@ public class Main {
     }
 
     private static void checkIndex(int length, int idx) {
-        if (0 > idx || idx >= length) {
-            throw new IndexOutOfBoundsException("최대 길이를 초과했습니다.");
-        }
+        Objects.checkIndex(idx, length);
     }
 }

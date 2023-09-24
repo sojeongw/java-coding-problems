@@ -1,6 +1,5 @@
 package org.examples.chapter02.p49_immutableclass;
 
-import java.util.Collections;
 import java.util.List;
 
 public final class Car {
